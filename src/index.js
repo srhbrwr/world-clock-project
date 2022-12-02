@@ -1,5 +1,5 @@
 function updateTime() {
-
+    // los angeles
   let losAngelesElement = document.querySelector("#los-angeles");
   if (losAngelesElement) {
     let losAngelesDateElement = losAngelesElement.querySelector(".date");
@@ -11,7 +11,7 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small>]"
     );
   }
-
+    // paris
   let parisElement = document.querySelector("#paris");
   if (parisElement) {
     let parisDateElement = parisElement.querySelector(".date");
@@ -23,6 +23,19 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small>]"
     );
   }
+    // chicago
+  let chicagoElement = document.querySelector("#chicago");
+  if (chicagoElement) {
+    let chicagoDateElement = chicagoElement.querySelector(".date");
+    let chicagoTimeElement = chicagoElement.querySelector(".time");
+    let chicagoTime = moment().tz("America/Chicago");
+
+    chicagoDateElement.innerHTML = chicagoTime.format("MMMM Do YYYY");
+    chicagoTimeElement.innerHTML = chicagoTime.format(
+        "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+
 }
 
 function updateCity(event) {

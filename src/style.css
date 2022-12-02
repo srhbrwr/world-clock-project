@@ -57,6 +57,10 @@ select {
   line-height: 48px;
 }
 
+a {
+  color: rgb(113, 112, 112);
+}
+
 footer {
   text-align: center;
   font-size: 18px;
